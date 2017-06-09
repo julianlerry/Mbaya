@@ -2,6 +2,7 @@ package ga.astech.mbaya.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -12,7 +13,7 @@ import java.util.HashMap;
 import ga.astech.mbaya.R;
 import ga.astech.mbaya.adapter.MyAdapter;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     private HashMap<String, Integer> mItems;
 
@@ -22,7 +23,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setHasFixedSize(true  );
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
