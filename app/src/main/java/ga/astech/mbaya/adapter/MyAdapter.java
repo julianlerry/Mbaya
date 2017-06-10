@@ -11,17 +11,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
 import ga.astech.mbaya.R;
+import ga.astech.mbaya.fragments.DetailsItem;
 
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.Holder> {
 
-    private HashMap<String, Integer> mItems;
+    private ArrayList<DetailsItem> details;
 
-    public MyAdapter(HashMap<String, Integer> items) {
-        mItems = items;
+    public MyAdapter(ArrayList<DetailsItem> items) {
+        details = items;
     }
 
     public static class Holder extends RecyclerView.ViewHolder {
@@ -43,13 +44,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.Holder> {
 
     @Override
     public void onBindViewHolder(Holder holder, int position) {
-        String key = (String) mItems.keySet().toArray()[position];
-        holder.textView.setText(key);
-        holder.imageView.setImageResource(mItems.get(key));
+        final  DetailsItem fp = details.get(position);
+        holder.textView.setText(fp.getTextView());
+        holder.imageView.setImageResource(fp.getImageView());
     }
 
     @Override
     public int getItemCount() {
-        return mItems.size();
+        return details.size();
     }
 }

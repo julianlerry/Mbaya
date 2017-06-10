@@ -7,7 +7,7 @@ package ga.astech.mbaya.fragments;
 public class DetailsItem {
 
     private String textView;
-    private String imageView;
+    private int imageView;
 
     public String getTextView() {
         return textView;
@@ -17,11 +17,11 @@ public class DetailsItem {
         this.textView = textView;
     }
 
-    public String getImageView() {
+    public int getImageView() {
         return imageView;
     }
 
-    public void setImageView(String imageView) {
+    public void setImageView(int imageView) {
         this.imageView = imageView;
     }
 }
