@@ -12,39 +12,88 @@
         android:layout_height = "wrap_content"
         card_view:contentPadding="@dimen/activity_horizontal_margin"
         card_view:cardCornerRadius="6dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-        <!--  ListRow Left sied Thumbnail image -->
-        <LinearLayout android:id="@+id/thumbnail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="3dip"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/image_bg"
-            android:layout_marginRight="5dip">
+            <!--  ListRow Left sied Thumbnail image -->
+            <LinearLayout android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/image_bg"
+                android:layout_marginRight="5dip">
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"/>
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="90dp"
+                        android:layout_height="100dp"/>
 
-        </LinearLayout>
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_margin="4dp"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/thumbnail"
-                android:layout_toRightOf="@+id/thumbnail"
-                android:textColor="#040404"
-                android:typeface="sans"
-                android:textSize="15dip"
-                android:textStyle="bold"/>
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/thumbnail"
+                    android:layout_toRightOf="@+id/thumbnail"
+                    android:textColor="#040404"
+                    android:typeface="sans"
+                    android:textSize="17dip"
+                    android:textStyle="bold"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/costView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView"
+                    android:textColor="#666"
+                    android:textSize="15dip"
+                    android:textStyle="bold"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/descriptionView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/costView"
+                    android:textColor="#666"
+                    android:textSize="14dip"
+                    android:maxLines="2"/>
+
+                <TextView
+                    android:id="@+id/cityView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/descriptionView"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:textColor="#666"
+                    android:textSize="15dip"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/dateView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/descriptionView"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:textColor="#666"
+                    android:textSize="14dip"
+                    android:maxLines="1"/>
+
+            </RelativeLayout>
+
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

@@ -29,6 +29,18 @@ public class MainActivity extends AppCompatActivity {
 
         final String[] titl = { "Gingerbread", "Honeycomb",
                 "Ice Cream Sandwitch", "JellyBean", "KitKat", "LollyPop"};
+        final String[] cost = { "15 000 FCFA", "125 000 FCFA",
+                "43 200 FCFA", "315 250 FCFA", "25 000 FCFA", "5 500 FCFA"};
+        final String[] descrip = { "l’application que le système doit connaitre pour pouvoir la lancer. Ce fichier définit le nom du package de l’application,",
+                "Pour chaque fichier de ressource qu’on inclue dans le projet, un identifiant unique est créé pour référencer cette ressource.",
+                "Pour chaque fichier de ressource qu’on inclue dans le projet, un identifiant unique est créé pour référencer cette ressource.",
+                "Pour chaque fichier de ressource qu’on inclue dans le projet, un identifiant unique est créé pour référencer cette ressource.",
+                "Pour chaque fichier de ressource qu’on inclue dans le projet, un identifiant unique est créé pour référencer cette ressource.",
+                "l’application que le système doit connaitre pour pouvoir la lancer. Ce fichier définit le nom du package de l’application,"};
+        final String[] city = { "Moabi", "Lastourville",
+                "Libreville", "Ovan", "Oyem", "Port Gentil"};
+        final String[] dpub = { "02-06-2017", "29-05-2017",
+                "18-05-2017", "22-04-2017", "12-03-2017", "23-01-2017"};
         final int[] icons = {R.drawable.astech, R.drawable.astech, R.drawable.astech, R.drawable.astech, R.drawable.astech, R.drawable.astech};
 
 
@@ -38,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
             DetailsItem feed = new DetailsItem();
 
             feed.setTextView(titl[i]);
+            feed.setCostView(cost[i]);
+            feed.setDescriptionView(descrip[i]);
+            feed.setCityView(city[i]);
+            feed.setDateView(dpub[i]);
             feed.setImageView(icons[i]);
             details.add(feed);
         }
@@ -45,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true  );
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        MyAdapter mAdapter = new MyAdapter(details);
+        MyAdapter mAdapter = new MyAdapter(details, this);
         mRecyclerView.setAdapter(mAdapter);
     }
 
