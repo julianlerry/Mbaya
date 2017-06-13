@@ -2,10 +2,13 @@ package ga.astech.mbaya.activities;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -20,11 +23,19 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<DetailsItem> details;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Toolbar declaration
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setTitle("Vanessa");
+        getSupportActionBar().setIcon(getDrawable(R.drawable.ic_home));
+
+        // ReclyclerView declaration
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
         final String[] titl = { "Gingerbread", "Honeycomb",
@@ -80,8 +91,18 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch(id) {
+            case R.id.action_refresh :
+                break;
+            case R.id.action_mail :
+                break;
+            case R.id.action_profil :
+                break;
+            case R.id.action_setting :
+                break;
+            case R.id.action_about :
+                break;
+            default:
         }
 
         return super.onOptionsItemSelected(item);

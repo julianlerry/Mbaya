@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Mbaya</string>
+    <string name="action_new" />
+    <string name="action_edit" />
+    <string name="action_delete" />
+    <string name="action_refresh" />
+    <string name="action_mail" />
+    <string name="action_add" />
+    <string name="action_profil">Profile</string>
+    <string name="action_setting">Parametre</string>
+    <string name="action_about">A propos</string>
 </resources>
