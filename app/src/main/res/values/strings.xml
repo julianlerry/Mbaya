@@ -1,15 +1,16 @@
 <resources>
     <string name="app_name">Mbaya</string>
     <string name="action_new" />
+    <string name="action_search" />
     <string name="action_edit" />
     <string name="action_delete" />
     <string name="action_refresh" />
     <string name="action_mail" />
     <string name="action_add" />
     <string name="action_profil">Profile</string>
-    <string name="action_setting">Parametre</string>
+    <string name="action_setting"/>
     <string name="action_about">A propos</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Angelique</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="action_msg" >Message</string>
